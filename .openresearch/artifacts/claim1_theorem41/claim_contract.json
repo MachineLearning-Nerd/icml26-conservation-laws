@@ -1,0 +1,22 @@
+{
+  "claim_id": "C1",
+  "paper": "arXiv:2606.17816",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2606.17816#S4.Thmtheorem1",
+  "statement": "For the stated GELU and SiLU feedforward layers, every C1 conservation law under the paper's dataset-universal Euclidean-gradient-flow definition is constant.",
+  "quantifiers": [
+    "every C1 function h on the full Euclidean parameter space",
+    "every dataset and initialization",
+    "all finite positive dimensions covered by the architecture"
+  ],
+  "assumptions": [
+    "C2 loss",
+    "the loss-gradient span V_l is the full output space",
+    "Euclidean gradient flow",
+    "GELU(z)=z*Phi(z) or SiLU(z)=z*sigmoid(z)"
+  ],
+  "acceptance": {
+    "proof": "An independently reconstructed arbitrary-width symbolic derivation establishes that grad(h)=0 everywhere.",
+    "checker": "Exact Fraction arithmetic confirms the rational-map rank for widths 1 through 8 and rejects a repeated-gamma control.",
+    "independent_consequence": "Generic sampled Jacobians have full column rank for both activations in every deterministic seed."
+  }
+}

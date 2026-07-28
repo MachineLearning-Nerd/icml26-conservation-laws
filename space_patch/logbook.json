@@ -15,6 +15,12 @@
     "file": "pages/index.md",
     "children": [
       {
+        "slug": "current-claim1",
+        "title": "Current verification — Claim 1",
+        "file": "pages/current-claim1/page.md",
+        "children": []
+      },
+      {
         "slug": "current-claim2",
         "title": "Current verification — Claim 2",
         "file": "pages/current-claim2/page.md",
@@ -41,5 +47,5 @@
     ]
   },
   "agent_view_tokens": 1700,
-  "revision": "claim4-theorem47-candidate"
+  "revision": "claim1-through-claim4-candidate"
 }

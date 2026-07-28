@@ -4,6 +4,7 @@
 
 | Page | Status |
 | --- | --- |
+| [Claim 1 — GELU/SiLU completeness](#/current-claim1) | **VERIFIED** |
 | [Claim 2 — SwiGLU symmetry certificate](#/current-claim2) | **VERIFIED** |
 | [Claim 4 — exact Theorem 4.7 counterexample](#/current-claim4) | **FALSIFIED** |
 
