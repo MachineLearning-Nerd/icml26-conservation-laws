@@ -9,10 +9,10 @@
 - Python: `>=3.12,<3.13`, locked by `uv.lock`.
 - NumPy: `2.3.2` (used only by cumulative historical regression checks).
 - Exact counterexample dependencies: Python standard library only.
+- Verifier/code commit: `cc587d8571294dfcbd393c2c68b28e2559bc9034`.
 - Determinism: exact arithmetic; no random seed is involved in the
   counterexample. Historical regressions retain seeds 0–5.
 - Estimated compute: one core, under five minutes.
 - Selected compute: local backend, one effective thread.
-- Git SHA and formal run ID are populated in the experiment description after
-  the formal run; the verifier prints visible CPU allocation and runtime.
-
+- The formal run commit and run ID are recorded in the experiment description
+  after execution; the verifier prints visible CPU allocation and runtime.
