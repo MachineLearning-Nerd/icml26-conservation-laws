@@ -1,0 +1,24 @@
+{
+  "claim_id": "C3-Theorems-4.3-4.4-MHA-RoPE",
+  "source_anchors": [
+    "https://ar5iv.labs.arxiv.org/html/2606.17816#S4.Thmtheorem3",
+    "https://ar5iv.labs.arxiv.org/html/2606.17816#S4.Thmtheorem4"
+  ],
+  "exact_invariants": [
+    "standard MHA: Q_i^T Q_i-K_i^T K_i",
+    "standard and RoPE MHA: V_i^T V_i-O_i^T O_i",
+    "RoPE: ||Q_i^(j)||_F^2-||K_i^(j)||_F^2 for every frequency block"
+  ],
+  "routes": [
+    "dimension-independent group-action cancellation certificate",
+    "explicit RoPE forward/backward implementation at paper widths",
+    "paper Appendix E nonconserved RoPE control"
+  ],
+  "acceptance": {
+    "symbolic_group_reduction": true,
+    "relative_rate_residual_max": "2e-12",
+    "nonconserved_control_min": "1e-7",
+    "cumulative_regression": true
+  }
+}
+

@@ -1,0 +1,13 @@
+{
+  "vanilla_qk": "Q E E^{-1} K^T = Q K^T",
+  "vanilla_vo": "V F F^{-1} O^T = V O^T",
+  "rope_block_exponents": {
+    "Q_block": 1,
+    "fixed_R_p_minus_q": 0,
+    "K_block": -1,
+    "total": 0
+  },
+  "chain_rule": "exact functional invariance implies zero directional loss derivative for arbitrary differentiable loss and dataset",
+  "passed": true
+}
+

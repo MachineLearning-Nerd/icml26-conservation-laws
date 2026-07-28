@@ -4,6 +4,7 @@
 
 | Page | Status |
 | --- | --- |
+| [Claim 2 — SwiGLU symmetry certificate](#/current-claim2) | **VERIFIED** |
 | [Claim 4 — exact Theorem 4.7 counterexample](#/current-claim4) | **FALSIFIED** |
 
 ## Historical rejected baseline
@@ -16,4 +17,3 @@ was rejected by the live evaluator and is superseded.
 | --- |
 | [Historical rejected baseline — verify](#/verify) |
 | [Historical rejected baseline — overview](#/overview) |
-

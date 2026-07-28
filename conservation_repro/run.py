@@ -15,13 +15,14 @@ import numpy as np
 from . import core
 from .claim4_theorem47 import verify as verify_theorem47
 from .claim2_swiglu import verify as verify_swiglu
+from .claim3_attention import verify as verify_attention
 
 
 def main() -> int:
     started = time.perf_counter()
     report: dict[str, object] = {
         "schema_version": 1,
-        "node_role": "cumulative_claim2_proof_and_claim4_falsification",
+        "node_role": "cumulative_claim2_claim3_proofs_and_claim4_falsification",
         "paper": "arXiv:2606.17816",
         "compute": {
             "estimate_cores": 1,
@@ -133,6 +134,10 @@ def main() -> int:
     swiglu = verify_swiglu()
     swiglu["check_passed"] = bool(swiglu["all_checks_passed"])
     report["claims"]["C2_theorem_4_2_exact"] = swiglu
+
+    attention = verify_attention()
+    attention["check_passed"] = bool(attention["all_checks_passed"])
+    report["claims"]["C3_theorems_4_3_4_4_exact"] = attention
 
     all_checks = all(
         bool(claim["check_passed"]) for claim in report["claims"].values()

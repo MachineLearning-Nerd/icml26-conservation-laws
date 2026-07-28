@@ -1,0 +1,9 @@
+{
+  "symmetry": "A[:,i] -> exp(t)A[:,i], C[i,:] -> exp(-t)C[i,:]",
+  "exponents": {"A_column": 1, "SiLU_Bx": 0, "C_row_x": -1},
+  "total": 0,
+  "gradient_flow_identity": "d/dt(||A||^2-||C||^2)=0",
+  "quantifiers": "all dimensions, hidden indices, inputs, parameters, differentiable losses, and datasets",
+  "passed": true
+}
+
