@@ -1,0 +1,122 @@
+"""Fixed cumulative entrypoint for every OpenResearch experiment node."""
+
+from __future__ import annotations
+
+import json
+import os
+import platform
+import sys
+import time
+from pathlib import Path
+
+import numpy as np
+
+from . import core
+
+
+def main() -> int:
+    started = time.perf_counter()
+    report: dict[str, object] = {
+        "schema_version": 1,
+        "node_role": "historical_rejected_baseline",
+        "paper": "arXiv:2606.17816",
+        "compute": {
+            "estimate_cores": 1,
+            "selected_backend": "local",
+            "selected_flavor": "local-single-core",
+            "logical_cpus_visible": os.cpu_count(),
+            "effective_thread_limit": 1,
+            "python": sys.version.split()[0],
+            "platform": platform.platform(),
+            "numpy": np.__version__,
+        },
+        "claims": {},
+    }
+
+    c1_rows = []
+    for seed in range(6):
+        rates = core.gelu_silu_candidate_drift(seed)
+        c1_rows.append({"seed": seed, **rates})
+    c1_ok = all(min(row["gelu"], row["silu"]) > 1e-3 for row in c1_rows)
+    report["claims"]["C1"] = {
+        "status": "TOY",
+        "test": "one ReLU-style candidate is not conserved; not a completeness proof",
+        "rows": c1_rows,
+        "check_passed": c1_ok,
+    }
+
+    c2_rows = [
+        {"seed": seed, "orthogonality_residual": core.swiglu_residual(seed)}
+        for seed in range(6)
+    ]
+    c2_ok = max(row["orthogonality_residual"] for row in c2_rows) < 1e-10
+    report["claims"]["C2"] = {
+        "status": "TOY",
+        "rows": c2_rows,
+        "check_passed": c2_ok,
+    }
+
+    c3_rows = [
+        {"seed": seed, **core.attention_residual(seed)} for seed in range(5)
+    ]
+    c3_drift = core.attention_gd_drift(seed=1)
+    c3_ok = (
+        max(max(row["qk"], row["vo"]) for row in c3_rows) < 1e-10
+        and c3_drift["qk"] < 0.05
+        and c3_drift["vo"] < 0.05
+    )
+    report["claims"]["C3"] = {
+        "status": "TOY",
+        "scope": "standard MHA only; RoPE absent",
+        "rows": c3_rows,
+        "gd_drift_40_steps": c3_drift,
+        "check_passed": c3_ok,
+    }
+
+    c4_rows = [
+        {"seed": seed, "max_residual": core.moe_swiglu_residual(seed)}
+        for seed in range(5)
+    ]
+    c4_ok = max(row["max_residual"] for row in c4_rows) < 1e-10
+    report["claims"]["C4"] = {
+        "status": "TOY",
+        "scope": "dense softmax expert invariants only; sparse and sigmoid absent",
+        "rows": c4_rows,
+        "check_passed": c4_ok,
+    }
+
+    c5_rows = []
+    for seed in range(4):
+        taus, drifts, slope = core.tau2_scaling(seed)
+        c5_rows.append(
+            {"seed": seed, "taus": taus, "drifts": drifts, "slope": slope}
+        )
+    c5_ok = all(1.95 < row["slope"] < 2.05 for row in c5_rows)
+    report["claims"]["C5"] = {
+        "status": "TOY",
+        "scope": "single small SwiGLU step; no paper dataset/model training",
+        "rows": c5_rows,
+        "check_passed": c5_ok,
+    }
+
+    all_checks = all(
+        bool(claim["check_passed"]) for claim in report["claims"].values()
+    )
+    report["baseline_regression_passed"] = all_checks
+    report["runtime_seconds"] = time.perf_counter() - started
+
+    output_dir = Path("outputs")
+    output_dir.mkdir(exist_ok=True)
+    (output_dir / "baseline.json").write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+
+    print("=== EVAL.md: historical rejected baseline ===")
+    print(json.dumps(report, indent=2, sort_keys=True))
+    print("=== END EVAL.md ===")
+    return 0 if all_checks else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
