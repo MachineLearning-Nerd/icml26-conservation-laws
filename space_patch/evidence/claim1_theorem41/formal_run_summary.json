@@ -1,0 +1,24 @@
+{
+  "run_id": "dc3ad414-e440-4a58-96cb-c4ecde4de22b",
+  "commit": "4efa04d",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "logical_cpus_visible": 64,
+  "job_wall_seconds": 21,
+  "all_checks_passed": true,
+  "exact_generating_function_certificate": {
+    "passed": true,
+    "exact_fraction_checks": [
+      {"width": 1, "unknowns": 2, "exact_rank": 2},
+      {"width": 2, "unknowns": 4, "exact_rank": 4},
+      {"width": 3, "unknowns": 6, "exact_rank": 6},
+      {"width": 4, "unknowns": 8, "exact_rank": 8},
+      {"width": 5, "unknowns": 10, "exact_rank": 10},
+      {"width": 6, "unknowns": 12, "exact_rank": 12},
+      {"width": 7, "unknowns": 14, "exact_rank": 14},
+      {"width": 8, "unknowns": 16, "exact_rank": 16}
+    ],
+    "negative_control": {"unknowns": 6, "exact_rank": 4, "rejected_as_intended": true}
+  },
+  "finite_span_audit": {"passed": true, "full_rank_cases": 10, "minimum_singular_ratio": 0.00010728791021724164}
+}

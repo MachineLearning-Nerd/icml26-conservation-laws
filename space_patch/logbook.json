@@ -27,9 +27,21 @@
         "children": []
       },
       {
+        "slug": "current-claim3",
+        "title": "Current verification — Claim 3",
+        "file": "pages/current-claim3/page.md",
+        "children": []
+      },
+      {
         "slug": "current-claim4",
         "title": "Current verification — Claim 4",
         "file": "pages/current-claim4/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim5",
+        "title": "Current audit — Claim 5",
+        "file": "pages/current-claim5/page.md",
         "children": []
       },
       {

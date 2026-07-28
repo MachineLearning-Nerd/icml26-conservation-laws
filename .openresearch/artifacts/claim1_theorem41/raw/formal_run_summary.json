@@ -1,0 +1,16 @@
+{
+  "run_id": "dc3ad414-e440-4a58-96cb-c4ecde4de22b",
+  "commit": "4efa04d",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "logical_cpus_visible": 64,
+  "job_wall_seconds": 21,
+  "cumulative_runtime_seconds": 2.378076703986153,
+  "claim_runtime_seconds": 0.15163217694498599,
+  "exact_ranks_by_width": [2, 4, 6, 8, 10, 12, 14, 16],
+  "negative_control_rank": 4,
+  "negative_control_unknowns": 6,
+  "all_ten_jacobians_full_rank": true,
+  "minimum_singular_ratio": 0.00010728791021724164,
+  "verdict": "VERIFIED"
+}

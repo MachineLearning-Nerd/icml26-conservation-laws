@@ -17,13 +17,14 @@ from .claim4_theorem47 import verify as verify_theorem47
 from .claim2_swiglu import verify as verify_swiglu
 from .claim3_attention import verify as verify_attention
 from .claim1_theorem41 import verify as verify_theorem41
+from .claim5_figure2 import verify as verify_figure2
 
 
 def main() -> int:
     started = time.perf_counter()
     report: dict[str, object] = {
         "schema_version": 1,
-        "node_role": "cumulative_claim1_claim2_claim3_proofs_and_claim4_falsification",
+        "node_role": "cumulative_all_claims_with_claim5_four_route_audit",
         "paper": "arXiv:2606.17816",
         "compute": {
             "estimate_cores": 1,
@@ -143,6 +144,10 @@ def main() -> int:
     theorem41 = verify_theorem41()
     theorem41["check_passed"] = bool(theorem41["all_checks_passed"])
     report["claims"]["C1_theorem_4_1_exact"] = theorem41
+
+    figure2 = verify_figure2()
+    figure2["check_passed"] = bool(figure2["all_checks_passed"])
+    report["claims"]["C5_figure2_exact_scope"] = figure2
 
     all_checks = all(
         bool(claim["check_passed"]) for claim in report["claims"].values()
