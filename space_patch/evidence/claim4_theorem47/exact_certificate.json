@@ -1,0 +1,9 @@
+{
+  "verdict": "FALSIFIED",
+  "dL_d_common_shift": "-9/250",
+  "d_dt_sum_gate_rows_coordinate_1": "9/250",
+  "softmax_control_dL_d_common_shift": "0",
+  "exact_arithmetic_passed": true,
+  "theorem_4_7_contradicted": true
+}
+

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "title": "Repro - NN Conservation Laws",
+  "emoji": "🎯",
+  "space_id": "DineshAI/ay4Q69fAJL",
+  "paper": "arXiv:2606.17816",
+  "tags": [
+    "icml2026-repro",
+    "paper-ay4Q69fAJL"
+  ],
+  "updated_at": "2026-07-28T14:30:00+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - NN Conservation Laws",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "current-claim1",
+        "title": "Current verification — Claim 1",
+        "file": "pages/current-claim1/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim2",
+        "title": "Current verification — Claim 2",
+        "file": "pages/current-claim2/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim3",
+        "title": "Current verification — Claim 3",
+        "file": "pages/current-claim3/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim4",
+        "title": "Current verification — Claim 4",
+        "file": "pages/current-claim4/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim5",
+        "title": "Current audit — Claim 5",
+        "file": "pages/current-claim5/page.md",
+        "children": []
+      },
+      {
+        "slug": "verify",
+        "title": "Historical rejected baseline — verify",
+        "file": "pages/verify/page.md",
+        "children": []
+      },
+      {
+        "slug": "overview",
+        "title": "Historical rejected baseline — overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 4000,
+  "revision": "claim1-through-claim5-cumulative-release-candidate"
+}

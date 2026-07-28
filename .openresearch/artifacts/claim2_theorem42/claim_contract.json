@@ -1,0 +1,23 @@
+{
+  "claim_id": "C2-Theorem-4.2-SwiGLU",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2606.17816#S4.Thmtheorem2",
+  "exact_invariant": "For every hidden index i, ||A[:,i]||^2-||C[i,:]||^2 is constant along Euclidean gradient flow for every dataset.",
+  "global_assumptions": [
+    "C1 conservation-law functions",
+    "C2 loss in prediction",
+    "V_ell=R^d",
+    "every initialization and dataset"
+  ],
+  "verification_routes": [
+    "dimension-independent functional symmetry and chain-rule certificate",
+    "independent float64 analytic-gradient audit at d=256,d1=1024,12 layers,10 seeds",
+    "nonconserved elementwise-difference control"
+  ],
+  "acceptance": {
+    "structural_exponent_sum": 0,
+    "relative_rate_residual_max": "5e-13",
+    "nonconserved_control_min": "1e-8",
+    "cumulative_regression": true
+  }
+}
+

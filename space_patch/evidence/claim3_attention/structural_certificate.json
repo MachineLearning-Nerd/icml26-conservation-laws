@@ -1,0 +1,6 @@
+{
+  "qk": "Q->QE and K->K E^{-T} leaves QK^T unchanged",
+  "vo": "V->VF and O->O F^{-T} leaves VO^T unchanged",
+  "rope": "Q_block->exp(t)Q_block and K_block->exp(-t)K_block leaves Q_block R K_block^T unchanged",
+  "passed": true
+}

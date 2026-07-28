@@ -1,0 +1,33 @@
+{
+  "construction": {
+    "d": 3,
+    "expert_outputs": [["0", "0", "0"], ["1", "0", "0"]],
+    "hidden_dimension": 1,
+    "input": ["1", "0", "0"],
+    "logits": ["0", "ln(3)"],
+    "loss": "squared_error_half_norm",
+    "n_experts": 2,
+    "target": ["0", "0", "0"]
+  },
+  "normalized_sigmoid": {
+    "claimed_invariant_is_conserved": false,
+    "dL_d_common_shift": "-9/250",
+    "dL_dz1": "-9/125",
+    "dL_dz2": "9/250",
+    "d_dt_sum_gate_rows_coordinate_1": "9/250",
+    "gate_2": "3/5",
+    "loss": "9/50",
+    "sigmoid_values": ["1/2", "3/4"]
+  },
+  "softmax_reference_control": {
+    "claimed_invariant_is_conserved": true,
+    "dL_d_common_shift": "0/1",
+    "dL_dz1": "-9/64",
+    "dL_dz2": "9/64",
+    "gate_2": "3/4"
+  },
+  "exact_arithmetic_passed": true,
+  "theorem_4_7_contradicted": true,
+  "verdict": "FALSIFIED"
+}
+

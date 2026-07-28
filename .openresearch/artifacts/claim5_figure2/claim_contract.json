@@ -1,0 +1,12 @@
+{
+  "claim_id": "C5",
+  "source_anchors": [
+    "https://ar5iv.labs.arxiv.org/html/2606.17816#S5.F2",
+    "https://ar5iv.labs.arxiv.org/html/2606.17816#S6",
+    "https://ar5iv.labs.arxiv.org/html/2606.17816#A4"
+  ],
+  "statement": "The predicted conservation errors exhibit O(tau^2*k) behavior during the paper's Qwen-3-style and ViT training on WikiText-103, PTB, CIFAR-10, and ImageNet-1K.",
+  "required_scope": "Three learning rates and ten independent seeds per configuration, exact paper architectures, optimizers, schedules, datasets, and block metric.",
+  "acceptance": "Reproduce the named training trajectories with raw data and confidence intervals, or produce an assumption-matched contradiction of that exact empirical statement.",
+  "verdict": "BLOCKED"
+}

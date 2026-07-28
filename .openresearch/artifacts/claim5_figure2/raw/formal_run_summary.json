@@ -1,0 +1,16 @@
+{
+  "run_id": "0ec4b425-e079-4ad4-b221-05809ef01326",
+  "commit": "cb25bfa7917568f55b6aeb121291c446f1ebfdc5",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "logical_cpus_visible": 64,
+  "job_wall_seconds": 21,
+  "cumulative_runtime_seconds": 2.982142894063145,
+  "protocol_complete": true,
+  "route_1": {"invariant_slope": 2.0000449625507155, "nonconserved_control_slope": 0.9997208924672687},
+  "route_2": {"minimum_individual_runs": 120, "training_code_present": false, "raw_logs_present": false},
+  "route_3": {"measured_flops_per_second": 26734913270.7707, "wikitext_lower_bound_flops": 19568944742400000, "projected_lower_seconds": 731962.1554110199},
+  "route_4": {"sigmoid_one_step_slope": 1.0000000000000007, "softmax_control_zero": true, "falsification_succeeded": false},
+  "verdict": "BLOCKED",
+  "confidence": "LOW"
+}

@@ -1,0 +1,35 @@
+{
+  "run_id": "0ec4b425-e079-4ad4-b221-05809ef01326",
+  "commit": "cb25bfa7917568f55b6aeb121291c446f1ebfdc5",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "logical_cpus_visible": 64,
+  "job_wall_seconds": 21,
+  "protocol_complete": true,
+  "verdict": "BLOCKED",
+  "confidence": "LOW",
+  "routes": {
+    "1_exact_discretization_non_circularity": {
+      "quadratic_invariant_loglog_slope": 2.0000449625507155,
+      "nonconserved_control_loglog_slope": 0.9997208924672687,
+      "passed": true
+    },
+    "2_exact_paper_configuration_audit": {
+      "minimum_individual_runs": 120,
+      "training_implementation_present": false,
+      "raw_named_dataset_logs_present": false,
+      "result": "INCOMPLETE"
+    },
+    "3_independent_cpu_resource_calibration": {
+      "measured_flops_per_second": 26734913270.7707,
+      "wikitext_only_lower_bound_flops": 19568944742400000,
+      "projected_lower_seconds": 731962.1554110199,
+      "omits_backward_attention_experts_and_three_datasets": true
+    },
+    "4_mandatory_falsification_attempt": {
+      "normalized_sigmoid_one_step_slope": 1.0000000000000007,
+      "negative_control_passed": true,
+      "falsification_succeeded": false
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "claim": "Paper-scale Figure 2/Section 6 validation on four named datasets",
+  "required_scope": "exact models, datasets, schedules, three rates, ten seeds",
+  "verdict": "BLOCKED",
+  "confidence": "LOW"
+}

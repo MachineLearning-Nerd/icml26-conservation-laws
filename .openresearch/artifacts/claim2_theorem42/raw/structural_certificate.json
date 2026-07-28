@@ -1,0 +1,13 @@
+{
+  "symmetry": "A[:,i] -> exp(t)A[:,i], C[i,:] -> exp(-t)C[i,:]",
+  "exponents": {
+    "A_column": 1,
+    "SiLU_Bx": 0,
+    "C_row_x": -1
+  },
+  "model_term_total_exponent": 0,
+  "gradient_flow_identity": "d/dt(||A[:,i]||^2-||C[i,:]||^2)=-2*(<A,grad_A L>-<C,grad_C L>)=0",
+  "quantifiers": "every d,d1,i,x,parameter point,differentiable loss,dataset",
+  "passed": true
+}
+

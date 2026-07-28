@@ -1,0 +1,14 @@
+{
+  "run_id": "dd30dd24-c4b3-48d0-b39a-2b4987e67580",
+  "commit": "f9a9805c941e4e57e4116b444a50c06f73522778",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "logical_cpus_visible": 64,
+  "job_wall_seconds": 21,
+  "configuration": {"layers": 12, "d": 192, "heads": 3, "head_dimension": 64, "sequence_length": 32, "seeds": 10},
+  "max_relative_rate_residual": 2.2073201955743162e-16,
+  "max_rope_block_qk_rate_abs": 6.661338147750939e-16,
+  "max_vo_matrix_rate_fro": 1.051088885904111e-14,
+  "min_nonconserved_control_rate_abs": 0.3806736206839703,
+  "all_checks_passed": true
+}

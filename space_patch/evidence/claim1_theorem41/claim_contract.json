@@ -1,0 +1,6 @@
+{
+  "claim": "Every C1 conservation law of the stated GELU/SiLU FFN is constant",
+  "source": "arXiv:2606.17816 Theorem 4.1",
+  "assumptions": ["Euclidean gradient flow", "C2 loss", "full loss-gradient span", "every dataset and initialization"],
+  "verdict": "VERIFIED"
+}
