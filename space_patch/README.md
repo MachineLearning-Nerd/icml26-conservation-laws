@@ -43,19 +43,19 @@ uv run --frozen --no-dev python -m conservation_repro.run
 ```
 
 Pinned environment:
-[pyproject.toml](environment/pyproject.toml) · [uv.lock](environment/uv.lock).
-The complete cumulative source is visible under
-[source/conservation_repro](source/conservation_repro/run.py).
+[pyproject.toml](pyproject.toml) · [uv.lock](uv.lock).
+The complete runnable cumulative source is visible under
+[conservation_repro](conservation_repro/run.py).
 
 ## Evaluator-visible evidence matrix
 
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| C1 | [page](#/current-claim1) | [source](source/conservation_repro/claim1_theorem41.py) | yes | [raw](evidence/claim1_theorem41/formal_run_summary.json) | [checker](evidence/claim1_theorem41/verify.py) | repeated-pole rank drop | yes, universal C1 classification | VERIFIED |
-| C2 | [page](#/current-claim2) | [source](source/conservation_repro/claim2_swiglu.py) | yes | [raw](evidence/claim2_theorem42/model_scale_summary.json) | [checker](evidence/claim2_theorem42/verify.py) | elementwise non-law | yes, iff conditions and invariants | VERIFIED |
-| C3 | [page](#/current-claim3) | [source](source/conservation_repro/claim3_attention.py) | yes | [raw](evidence/claim3_attention/formal_run_summary.json) | [checker](evidence/claim3_attention/verify.py) | unmatched RoPE block | yes, MHA and RoPE displayed laws | VERIFIED |
-| C4 | [page](#/current-claim4) | [source](source/conservation_repro/claim4_theorem47.py) | yes | [raw](evidence/claim4_theorem47/exact_certificate.json) | [checker](evidence/claim4_theorem47/verify.py) | matched softmax / false theorem assertion | yes, Theorems 4.5–4.7 | FALSIFIED |
-| C5 | [page](#/current-claim5) | [source](source/conservation_repro/claim5_figure2.py) | yes | [raw](evidence/claim5_figure2/formal_run_summary.json) | [checker](evidence/claim5_figure2/verify.py) | non-law slope / softmax zero | yes, named Figure 2 trajectories | BLOCKED |
+| C1 | [page](#/current-claim1) | [source](conservation_repro/claim1_theorem41.py) | yes | [raw](evidence/claim1_theorem41/formal_run_summary.json) | [checker](evidence/claim1_theorem41/verify.py) | repeated-pole rank drop | yes, universal C1 classification | VERIFIED |
+| C2 | [page](#/current-claim2) | [source](conservation_repro/claim2_swiglu.py) | yes | [raw](evidence/claim2_theorem42/model_scale_summary.json) | [checker](evidence/claim2_theorem42/verify.py) | elementwise non-law | yes, iff conditions and invariants | VERIFIED |
+| C3 | [page](#/current-claim3) | [source](conservation_repro/claim3_attention.py) | yes | [raw](evidence/claim3_attention/formal_run_summary.json) | [checker](evidence/claim3_attention/verify.py) | unmatched RoPE block | yes, MHA and RoPE displayed laws | VERIFIED |
+| C4 | [page](#/current-claim4) | [source](conservation_repro/claim4_theorem47.py) | yes | [raw](evidence/claim4_theorem47/exact_certificate.json) | [checker](evidence/claim4_theorem47/verify.py) | matched softmax / false theorem assertion | yes, Theorems 4.5–4.7 | FALSIFIED |
+| C5 | [page](#/current-claim5) | [source](conservation_repro/claim5_figure2.py) | yes | [raw](evidence/claim5_figure2/formal_run_summary.json) | [checker](evidence/claim5_figure2/verify.py) | non-law slope / softmax zero | yes, named Figure 2 trajectories | BLOCKED |
 
 Every checker exits nonzero if its recorded evidence or intended control fails.
 A zero exit for Claim 5 means the four-route BLOCKED record is internally

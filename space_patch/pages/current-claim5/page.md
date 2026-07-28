@@ -34,7 +34,7 @@ authorized for CPU only.
 Download the [four-route raw record](../../evidence/claim5_figure2/formal_run_summary.json),
 [claim contract](../../evidence/claim5_figure2/claim_contract.json), and
 [fail-closed checker](../../evidence/claim5_figure2/verify.py). The
-[full four-route source](../../source/conservation_repro/claim5_figure2.py) is
+[full four-route source](../../conservation_repro/claim5_figure2.py) is
 also visible.
 
 ## Unblocker

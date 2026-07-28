@@ -66,7 +66,7 @@ Download:
 [independent checker output](../../evidence/claim4_theorem47/independent_checker_output.json) ·
 [standalone verifier](../../evidence/claim4_theorem47/verify.py) ·
 [claim contract](../../evidence/claim4_theorem47/claim_contract.json) ·
-[full verifier source](../../source/conservation_repro/claim4_theorem47.py).
+[full verifier source](../../conservation_repro/claim4_theorem47.py).
 
 ### Assumptions and scope
 

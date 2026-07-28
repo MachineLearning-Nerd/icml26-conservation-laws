@@ -47,7 +47,7 @@ Download:
 [raw summary](../../evidence/claim2_theorem42/model_scale_summary.json) ·
 [structural certificate](../../evidence/claim2_theorem42/structural_certificate.json) ·
 [fail-closed checker](../../evidence/claim2_theorem42/verify.py) ·
-[full verifier source](../../source/conservation_repro/claim2_swiglu.py).
+[full verifier source](../../conservation_repro/claim2_swiglu.py).
 
 Deviation: Appendix D's CIFAR-10 ViT has six layers. The numerical audit
 repeats the paper widths over 12 independently sampled layer instances; scale

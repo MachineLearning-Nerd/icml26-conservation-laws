@@ -47,7 +47,7 @@ GitHub `main`, and mark the paper awaiting judge.
    in the release manifest.
 
 The winning branch is
-`orx/evaluator-visible-cumulative-release-candidate`; its final Git SHA is
+`orx/runnable-space-root-package`; its final Git SHA is
 recorded in the manifest after the release-candidate commit.
 
 ## Runtime and compute

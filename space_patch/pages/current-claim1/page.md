@@ -49,8 +49,8 @@ The cumulative verifier exits nonzero on any failed certificate or control.
 Download the [standalone verifier](../../evidence/claim1_theorem41/verify.py),
 [claim contract](../../evidence/claim1_theorem41/claim_contract.json), and
 [formal run summary](../../evidence/claim1_theorem41/formal_run_summary.json).
-The [full verifier source](../../source/conservation_repro/claim1_theorem41.py)
-and [cumulative entrypoint](../../source/conservation_repro/run.py) are also
+The [full verifier source](../../conservation_repro/claim1_theorem41.py)
+and [cumulative entrypoint](../../conservation_repro/run.py) are also
 evaluator-visible.
 
 ## Limitation
