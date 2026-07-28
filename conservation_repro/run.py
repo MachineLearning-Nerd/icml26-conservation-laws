@@ -14,18 +14,20 @@ import numpy as np
 
 from . import core
 from .claim4_theorem47 import verify as verify_theorem47
+from .claim2_swiglu import verify as verify_swiglu
 
 
 def main() -> int:
     started = time.perf_counter()
     report: dict[str, object] = {
         "schema_version": 1,
-        "node_role": "cumulative_claim4_theorem47_falsification",
+        "node_role": "cumulative_claim2_proof_and_claim4_falsification",
         "paper": "arXiv:2606.17816",
         "compute": {
             "estimate_cores": 1,
-            "selected_backend": "local",
-            "selected_flavor": "local-single-core",
+            "runtime_class": "uncertain_model_scale",
+            "selected_backend": "hf",
+            "selected_flavor": "cpu-upgrade",
             "logical_cpus_visible": os.cpu_count(),
             "effective_thread_limit": 1,
             "python": sys.version.split()[0],
@@ -128,6 +130,10 @@ def main() -> int:
     )
     report["claims"]["C4_theorem_4_7_exact"] = theorem47
 
+    swiglu = verify_swiglu()
+    swiglu["check_passed"] = bool(swiglu["all_checks_passed"])
+    report["claims"]["C2_theorem_4_2_exact"] = swiglu
+
     all_checks = all(
         bool(claim["check_passed"]) for claim in report["claims"].values()
     )
@@ -140,7 +146,7 @@ def main() -> int:
         json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
 
-    print("=== EVAL.md: historical rejected baseline ===")
+    print(f"=== EVAL.md: {report['node_role']} ===")
     print(json.dumps(report, indent=2, sort_keys=True))
     print("=== END EVAL.md ===")
     return 0 if all_checks else 1
