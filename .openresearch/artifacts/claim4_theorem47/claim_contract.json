@@ -1,0 +1,33 @@
+{
+  "claim_id": "C4-Theorem-4.7-normalized-sigmoid",
+  "paper": "arXiv:2606.17816v1",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2606.17816#S4.Thmtheorem7",
+  "exact_statement": "Every conservation law for normalized-sigmoid-gated MoE and SMoE maps coincides with that of the standard softmax-gated MoE; in particular, it satisfies exactly the Theorem 4.5 constraints.",
+  "tested_consequence": "For h_j(W)=sum_i W[i,j], Theorem 4.5 identifies h_j as a conservation law; Theorem 4.7 therefore quantifies that it is also conserved for normalized-sigmoid gating.",
+  "quantifiers": {
+    "conservation_law": "all C1 h on the full parameter space",
+    "initialization": "every initialization",
+    "dataset": "every dataset",
+    "time": "all t >= 0 along Euclidean gradient flow"
+  },
+  "assumptions": {
+    "dimension": "d=3",
+    "experts": "n=2",
+    "hidden_dimension": "d1=1",
+    "model": "dense normalized-sigmoid-gated MoE with SwiGLU experts",
+    "loss": "ell(z,y)=0.5*||z-y||_2^2, C2 with V_ell=R^3",
+    "optimization": "Euclidean gradient flow",
+    "candidate_h": "h(W)=W[1,1]+W[2,1], a C-infinity function"
+  },
+  "acceptance": {
+    "falsified_if": "An explicit parameter point and one-example dataset satisfying every assumption has dh/dt != 0, confirmed by exact arithmetic and an independent numerical checker.",
+    "verified_if": "Not applicable to this counterexample route.",
+    "blocked_if": "The constructed experts do not belong to the stated model, an assumption fails, or the two independent derivatives disagree."
+  },
+  "expected_exact_result": {
+    "dL_d_common_shift": "-9/250",
+    "dh_dt": "9/250",
+    "softmax_control_dL_d_common_shift": "0"
+  }
+}
+

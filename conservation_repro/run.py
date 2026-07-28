@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import platform
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -12,13 +13,14 @@ from pathlib import Path
 import numpy as np
 
 from . import core
+from .claim4_theorem47 import verify as verify_theorem47
 
 
 def main() -> int:
     started = time.perf_counter()
     report: dict[str, object] = {
         "schema_version": 1,
-        "node_role": "historical_rejected_baseline",
+        "node_role": "cumulative_claim4_theorem47_falsification",
         "paper": "arXiv:2606.17816",
         "compute": {
             "estimate_cores": 1,
@@ -99,6 +101,33 @@ def main() -> int:
         "check_passed": c5_ok,
     }
 
+    theorem47 = verify_theorem47()
+    negative_control = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "conservation_repro.claim4_theorem47",
+            "--assert-theorem",
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    theorem47["negative_control"] = {
+        "command": (
+            "uv run --frozen --no-dev python -m "
+            "conservation_repro.claim4_theorem47 --assert-theorem"
+        ),
+        "expected_exit_code": 1,
+        "actual_exit_code": negative_control.returncode,
+        "rejected_as_intended": negative_control.returncode == 1,
+        "stdout_tail": negative_control.stdout.strip().splitlines()[-1],
+    }
+    theorem47["check_passed"] = bool(theorem47["all_checks_passed"]) and bool(
+        theorem47["negative_control"]["rejected_as_intended"]
+    )
+    report["claims"]["C4_theorem_4_7_exact"] = theorem47
+
     all_checks = all(
         bool(claim["check_passed"]) for claim in report["claims"].values()
     )
@@ -119,4 +148,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

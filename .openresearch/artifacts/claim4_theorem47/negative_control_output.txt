@@ -1,0 +1,7 @@
+Command:
+uv run --frozen --no-dev python -m conservation_repro.claim4_theorem47 --assert-theorem
+
+Expected exit code: 1
+Observed preflight exit code: 1
+Output: NEGATIVE CONTROL: theorem conservation assertion rejected as intended
+

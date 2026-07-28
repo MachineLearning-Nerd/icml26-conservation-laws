@@ -1,0 +1,11 @@
+{
+  "method": "80-digit central difference along common logit shift",
+  "step": "1E-25",
+  "normalized_sigmoid_dL_dc": "-0.0359999999999999999999999999999999999999999999999999772",
+  "expected_dL_dc": "-0.036",
+  "absolute_error": "2.28E-53",
+  "softmax_dL_dc": "-5E-56",
+  "softmax_absolute_error": "5E-56",
+  "passed": true
+}
+
