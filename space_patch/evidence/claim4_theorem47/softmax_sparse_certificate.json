@@ -1,0 +1,8 @@
+{
+  "dense_softmax": "A common shift of every gate row leaves all softmax probabilities unchanged.",
+  "sparse_top_k": "For k>1, a common shift preserves ordering, the Top-k set, and the renormalized softmax probabilities within it.",
+  "expert_invariants": "Each SwiGLU expert retains its independent A-column/C-row inverse-scaling symmetry.",
+  "individual_shift_control_changes_output": true,
+  "passed": true,
+  "scope": "Displayed dense and sparse laws; no independent no-additional-laws proof."
+}

@@ -8,7 +8,7 @@
     "icml2026-repro",
     "paper-ay4Q69fAJL"
   ],
-  "updated_at": "2026-07-28T12:30:00+00:00",
+  "updated_at": "2026-07-28T14:30:00+00:00",
   "root": {
     "slug": "index",
     "title": "Repro - NN Conservation Laws",
@@ -58,6 +58,6 @@
       }
     ]
   },
-  "agent_view_tokens": 1700,
-  "revision": "claim1-through-claim4-candidate"
+  "agent_view_tokens": 4000,
+  "revision": "claim1-through-claim5-cumulative-release-candidate"
 }

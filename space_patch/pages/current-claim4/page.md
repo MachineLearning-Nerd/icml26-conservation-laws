@@ -30,6 +30,16 @@ Exact rational differentiation gives:
 
 The claimed invariant therefore changes at nonzero instantaneous rate.
 
+### Dense and sparse softmax variants are also addressed
+
+For Theorem 4.5, a common shift of every gate row adds the same scalar to all
+logits, leaving dense softmax probabilities unchanged. For Theorem 4.6
+(`k>1`), that shift also preserves the complete ordering, the Top-k set, and
+the renormalized softmax probabilities inside the selected set. Every expert
+retains its independent SwiGLU inverse-scaling symmetry. A control that shifts
+only one selected expert changes the sparse output as intended. Download the
+[dense/sparse structural certificate](../../evidence/claim4_theorem47/softmax_sparse_certificate.json).
+
 ### Independent checker and fail-closed control
 
 An independent 80-digit central difference along the common-logit-shift
@@ -55,16 +65,17 @@ Download:
 [raw exact certificate](../../evidence/claim4_theorem47/exact_certificate.json) ·
 [independent checker output](../../evidence/claim4_theorem47/independent_checker_output.json) ·
 [standalone verifier](../../evidence/claim4_theorem47/verify.py) ·
-[claim contract](../../evidence/claim4_theorem47/claim_contract.json).
+[claim contract](../../evidence/claim4_theorem47/claim_contract.json) ·
+[full verifier source](../../source/conservation_repro/claim4_theorem47.py).
 
 ### Assumptions and scope
 
 Squared loss is `C2` and has `V_ell=R^3`; `h` is linear and therefore `C1`;
 the dynamics are Euclidean gradient flow; and the experts are exact instances
-of Equation 4. This result falsifies the normalized-sigmoid dense-gating
-portion of Theorem 4.7. It does not falsify the softmax results, the sparse
-case, or the expert-level SwiGLU invariants.
+of Equation 4. The displayed dense and sparse softmax laws are structurally
+verified. The counterexample falsifies the normalized-sigmoid dense-gating
+portion of Theorem 4.7. It does not falsify softmax laws or expert-level
+SwiGLU invariants.
 
 The prior `verify` and `overview` pages are preserved as the
 **Historical rejected baseline** and are superseded by this current verifier.
-

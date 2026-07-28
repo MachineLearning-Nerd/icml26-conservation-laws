@@ -36,7 +36,9 @@ ten deterministic seeds.
 
 Download the [raw summary](../../evidence/claim3_attention/formal_run_summary.json),
 [structural certificate](../../evidence/claim3_attention/structural_certificate.json),
-and [fail-closed checker](../../evidence/claim3_attention/verify.py).
+and [fail-closed checker](../../evidence/claim3_attention/verify.py). The
+[full verifier source](../../source/conservation_repro/claim3_attention.py) is
+visible here.
 
 ## Reproduce and limitation
 

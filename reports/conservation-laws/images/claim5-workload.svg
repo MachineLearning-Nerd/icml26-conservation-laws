@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+  <rect width="1100" height="420" fill="#111827"/>
+  <text x="55" y="52" font-family="Arial" font-size="27" font-weight="700" fill="#f9fafb">Why Figure 2 remains BLOCKED on CPU</text>
+  <g font-family="Arial">
+    <rect x="55" y="105" width="300" height="210" rx="14" fill="#1e3a8a"/>
+    <text x="85" y="150" font-size="18" font-weight="700" fill="#dbeafe">Exact paper scope</text>
+    <text x="85" y="190" font-size="30" font-weight="700" fill="#ffffff">≥120 runs</text>
+    <text x="85" y="230" font-size="17" fill="#bfdbfe">4 datasets × 3 rates × 10 seeds</text>
+    <text x="85" y="267" font-size="16" fill="#bfdbfe">H100, up to 4 h/config</text>
+    <rect x="400" y="105" width="300" height="210" rx="14" fill="#713f12"/>
+    <text x="430" y="150" font-size="18" font-weight="700" fill="#fef3c7">WikiText-only lower bound</text>
+    <text x="430" y="190" font-size="30" font-weight="700" fill="#ffffff">5.53B tokens</text>
+    <text x="430" y="230" font-size="17" fill="#fde68a">19.57 PFLOP for one projection/layer</text>
+    <text x="430" y="267" font-size="16" fill="#fde68a">~732k s at measured throughput</text>
+    <rect x="745" y="105" width="300" height="210" rx="14" fill="#7f1d1d"/>
+    <text x="775" y="150" font-size="18" font-weight="700" fill="#fee2e2">Still omitted</text>
+    <text x="775" y="194" font-size="17" fill="#fecaca">backward · attention · experts</text>
+    <text x="775" y="230" font-size="17" fill="#fecaca">optimizer · data · evaluation</text>
+    <text x="775" y="267" font-size="17" fill="#fecaca">three entire datasets</text>
+  </g>
+  <text x="55" y="365" font-family="Arial" font-size="18" fill="#d1d5db">A calibrated lower bound is evidence for BLOCKED—not permission to rename a proxy “full scale.”</text>
+</svg>

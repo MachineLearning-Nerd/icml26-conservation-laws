@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360">
+  <rect width="1100" height="360" fill="#0b1020"/>
+  <text x="50" y="55" fill="#f8fafc" font-family="Arial" font-size="28" font-weight="700">Five claims, exact verdicts</text>
+  <text x="50" y="88" fill="#94a3b8" font-family="Arial" font-size="17">CPU-only cumulative reproduction · prior live score 5/10</text>
+  <g font-family="Arial" font-size="18" font-weight="700">
+    <rect x="50" y="125" width="180" height="125" rx="12" fill="#14532d"/><text x="75" y="168" fill="#dcfce7">C1 VERIFIED</text><text x="75" y="205" fill="#86efac" font-size="15">proof certificate</text>
+    <rect x="250" y="125" width="180" height="125" rx="12" fill="#14532d"/><text x="275" y="168" fill="#dcfce7">C2 VERIFIED</text><text x="275" y="205" fill="#86efac" font-size="15">exact symmetry</text>
+    <rect x="450" y="125" width="180" height="125" rx="12" fill="#14532d"/><text x="475" y="168" fill="#dcfce7">C3 VERIFIED</text><text x="475" y="205" fill="#86efac" font-size="15">RoPE included</text>
+    <rect x="650" y="125" width="180" height="125" rx="12" fill="#7f1d1d"/><text x="675" y="168" fill="#fee2e2">C4 FALSIFIED</text><text x="675" y="205" fill="#fca5a5" font-size="15">exact 9/250 drift</text>
+    <rect x="850" y="125" width="180" height="125" rx="12" fill="#713f12"/><text x="875" y="168" fill="#fef3c7">C5 BLOCKED</text><text x="875" y="205" fill="#fcd34d" font-size="15">paper-scale CPU gap</text>
+  </g>
+  <text x="50" y="310" fill="#cbd5e1" font-family="Arial" font-size="18">Forecast only: conservative 7–9/10 · best-supported possible 9/10 · awaiting live judge</text>
+</svg>
