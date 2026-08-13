@@ -3,7 +3,7 @@
 - Paper: *Conservation Laws for Modern Neural Architectures*, arXiv:2606.17816v1.
 - Retrieved URL: `https://ar5iv.labs.arxiv.org/html/2606.17816`
 - Retrieval time: `2026-07-28T12:12:40Z`
-- HTTP User-Agent: `OpenResearch-Reproduction/1.0 (+https://github.com/MachineLearning-Nerd/icml26-repro-ay4Q69fAJL-conservation-laws-for-modern-neural-architectures)`
+- HTTP User-Agent: `OpenResearch-Reproduction/1.0 (+https://github.com/MachineLearning-Nerd/icml26-conservation-laws)`
 - Retrieved HTML SHA-256: `31078a87b1a9b38b5d13b0bafe40512ac6cccb04bd6f35b8de05ed2b8b804557`
 
 Primary anchors:
@@ -42,4 +42,3 @@ Exact quantifier notes:
 - Section 6 uses 10 independent seeds per configuration and the named
   Qwen-3/ViT models and four named datasets. The claimed empirical scaling is
   `O(tau^2 k)` under the stated bounded-Hessian/bounded-gradient assumptions.
-
