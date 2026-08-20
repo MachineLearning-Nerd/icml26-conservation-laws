@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "manifest_type": "claim_audit_release",
+  "source": {
+    "arxiv": "2606.17816",
+    "source_version": "arXiv:2606.17816v1",
+    "source_sha256": "31078a87b1a9b38b5d13b0bafe40512ac6cccb04bd6f35b8de05ed2b8b804557"
+  },
+  "required_paths": [
+    "README.md",
+    "STATUS.md",
+    "CLAIM_EVIDENCE.md",
+    "SOURCE_AUDIT.md",
+    "ENVIRONMENT.md",
+    "REPORT.md",
+    "AUTHOR_THANK_YOU.md",
+    "CITATION.cff",
+    "claims.json",
+    "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
+    "verify_final.py",
+    "branch-audit.md",
+    "pyproject.toml",
+    "uv.lock",
+    "conservation_repro/__init__.py",
+    "conservation_repro/core.py",
+    "conservation_repro/run.py",
+    "conservation_repro/claim1_theorem41.py",
+    "conservation_repro/claim2_swiglu.py",
+    "conservation_repro/claim3_attention.py",
+    "conservation_repro/claim4_theorem47.py",
+    "conservation_repro/claim5_figure2.py",
+    "notebooks/conservation_laws_tutorial.py",
+    "space_patch/README.md",
+    "space_patch/logbook.json",
+    "space_patch/pages/index.md",
+    "space_patch/pages/current-claim1/page.md",
+    "space_patch/pages/current-claim2/page.md",
+    "space_patch/pages/current-claim3/page.md",
+    "space_patch/pages/current-claim4/page.md",
+    "space_patch/pages/current-claim5/page.md",
+    "space_patch/evidence/claim1_theorem41/claim_contract.json",
+    "space_patch/evidence/claim1_theorem41/formal_run_summary.json",
+    "space_patch/evidence/claim1_theorem41/verify.py",
+    "space_patch/evidence/claim2_theorem42/model_scale_summary.json",
+    "space_patch/evidence/claim2_theorem42/structural_certificate.json",
+    "space_patch/evidence/claim2_theorem42/verify.py",
+    "space_patch/evidence/claim3_attention/formal_run_summary.json",
+    "space_patch/evidence/claim3_attention/structural_certificate.json",
+    "space_patch/evidence/claim3_attention/verify.py",
+    "space_patch/evidence/claim4_theorem47/claim_contract.json",
+    "space_patch/evidence/claim4_theorem47/exact_certificate.json",
+    "space_patch/evidence/claim4_theorem47/independent_checker_output.json",
+    "space_patch/evidence/claim4_theorem47/softmax_sparse_certificate.json",
+    "space_patch/evidence/claim4_theorem47/verify.py",
+    "space_patch/evidence/claim5_figure2/claim_contract.json",
+    "space_patch/evidence/claim5_figure2/formal_run_summary.json",
+    "space_patch/evidence/claim5_figure2/verify.py",
+    "space_patch/release/blind-review.md",
+    "space_patch/release/candidate-payload.sha256",
+    "space_patch/release/protected-subset-check.txt",
+    "space_patch/release/upload-allowlist.txt",
+    "space_patch/pyproject.toml",
+    "space_patch/uv.lock",
+    "space_patch/environment/pyproject.toml",
+    "space_patch/environment/uv.lock",
+    ".openresearch/artifacts/provenance/source_audit.md",
+    ".openresearch/artifacts/provenance/judged_space_manifest.sha256"
+  ],
+  "historical_supplied_paths": [
+    "space_patch/pages/verify/page.md",
+    "space_patch/pages/overview/page.md"
+  ],
+  "claim_evidence": {
+    "C1": [
+      ".openresearch/artifacts/claim1_theorem41/raw/formal_run_summary.json"
+    ],
+    "C2": [
+      ".openresearch/artifacts/claim2_theorem42/raw/model_scale_summary.json",
+      ".openresearch/artifacts/claim2_theorem42/raw/structural_certificate.json"
+    ],
+    "C3": [
+      ".openresearch/artifacts/claim3_attention/raw/formal_run_summary.json",
+      ".openresearch/artifacts/claim3_attention/raw/structural_certificate.json"
+    ],
+    "C4": [
+      ".openresearch/artifacts/claim4_theorem47/raw/exact_certificate.json"
+    ],
+    "C5": [
+      ".openresearch/artifacts/claim5_figure2/raw/formal_run_summary.json"
+    ]
+  },
+  "controls": {
+    "source_pinned": true,
+    "negative_controls_recorded": true,
+    "historical_space_preserved": true,
+    "current_score_claim": false,
+    "publication_allowed": false,
+    "author_endorsement_claimed": false
+  }
+}

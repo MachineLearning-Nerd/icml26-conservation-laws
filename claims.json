@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "paper": "arXiv:2606.17816v1",
+  "overall_status": "PARTIAL_C1_C2_C3_VERIFIED_C4_FALSIFIED_C5_BLOCKED",
+  "claims": [
+    {
+      "id": "C1",
+      "title": "GELU and SiLU conservation-law completeness",
+      "status": "VERIFIED_SCOPED",
+      "confidence": "HIGH",
+      "current_points": "1/2",
+      "source_anchors": ["Theorem 4.1", "Appendix A.1-A.2"],
+      "evidence_paths": [
+        ".openresearch/artifacts/claim1_theorem41/claim_contract.json",
+        ".openresearch/artifacts/claim1_theorem41/raw/formal_run_summary.json"
+      ],
+      "production_path": "conservation_repro/claim1_theorem41.py::verify",
+      "how_claim_is_produced": "Reconstruct the arbitrary-width Taylor and pole certificate, check exact Fraction ranks, and reject a repeated-gamma rank-loss control.",
+      "limitation": "Finite checks support the derivation but do not replace a proof assistant."
+    },
+    {
+      "id": "C2",
+      "title": "SwiGLU conservation laws",
+      "status": "VERIFIED_SCOPED",
+      "confidence": "HIGH",
+      "current_points": "1/2",
+      "source_anchors": ["Theorem 4.2"],
+      "evidence_paths": [
+        ".openresearch/artifacts/claim2_theorem42/claim_contract.json",
+        ".openresearch/artifacts/claim2_theorem42/raw/model_scale_summary.json",
+        ".openresearch/artifacts/claim2_theorem42/raw/structural_certificate.json"
+      ],
+      "production_path": "conservation_repro/claim2_swiglu.py::verify",
+      "how_claim_is_produced": "Derive the inverse-scaling symmetry and iff gradient condition, then audit paper-width blocks with an independent non-law control.",
+      "limitation": "The model-scale audit corroborates the structural result; it is not the universal proof by itself."
+    },
+    {
+      "id": "C3",
+      "title": "MHA and RoPE conservation laws",
+      "status": "VERIFIED_SCOPED",
+      "confidence": "MEDIUM",
+      "current_points": "1/2",
+      "source_anchors": ["Theorems 4.3-4.4", "Appendix E"],
+      "evidence_paths": [
+        ".openresearch/artifacts/claim3_attention/claim_contract.json",
+        ".openresearch/artifacts/claim3_attention/raw/formal_run_summary.json",
+        ".openresearch/artifacts/claim3_attention/raw/structural_certificate.json"
+      ],
+      "production_path": "conservation_repro/claim3_attention.py::verify",
+      "how_claim_is_produced": "Apply exact Q/K, V/O, and RoPE group actions, then audit the displayed invariants at paper-width settings with a non-conserved control.",
+      "limitation": "The broader no-additional-laws classification is not separately machine-formalized."
+    },
+    {
+      "id": "C4",
+      "title": "Normalized-sigmoid MoE laws coincide with softmax laws",
+      "status": "FALSIFIED_SCOPED",
+      "confidence": "HIGH",
+      "current_points": "1/2",
+      "source_anchors": ["Theorems 4.5-4.7"],
+      "evidence_paths": [
+        ".openresearch/artifacts/claim4_theorem47/claim_contract.json",
+        ".openresearch/artifacts/claim4_theorem47/raw/exact_certificate.json",
+        ".openresearch/artifacts/claim4_theorem47/raw/independent_checker_output.json"
+      ],
+      "production_path": "conservation_repro/claim4_theorem47.py::verify",
+      "how_claim_is_produced": "Construct an exact d=3 normalized-sigmoid counterexample where the claimed gate-row sum has gradient-flow derivative 9/250, and confirm it with an independent checker and softmax control.",
+      "limitation": "The contradiction targets the normalized-sigmoid portion; softmax and expert-level SwiGLU laws remain separate."
+    },
+    {
+      "id": "C5",
+      "title": "Figure 2 O(tau^2 k) scaling on named training runs",
+      "status": "BLOCKED",
+      "confidence": "LOW",
+      "current_points": "1/2",
+      "source_anchors": ["Section 6", "Figure 2", "Appendix D"],
+      "evidence_paths": [
+        ".openresearch/artifacts/claim5_figure2/claim_contract.json",
+        ".openresearch/artifacts/claim5_figure2/raw/formal_run_summary.json"
+      ],
+      "production_path": "conservation_repro/claim5_figure2.py::verify",
+      "how_claim_is_produced": "Complete discretization, exact-configuration, resource, and assumption-preserving falsification routes without substituting a toy run for the named campaign.",
+      "limitation": "The authors' training implementation, raw trajectories, and authorized H100-scale execution are unavailable."
+    }
+  ]
+}

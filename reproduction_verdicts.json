@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "paper": "arXiv:2606.17816v1",
+  "source_sha256": "31078a87b1a9b38b5d13b0bafe40512ac6cccb04bd6f35b8de05ed2b8b804557",
+  "overall_verdict": "PARTIAL_C1_C2_C3_VERIFIED_C4_FALSIFIED_C5_BLOCKED",
+  "claim_statuses": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "FALSIFIED_SCOPED",
+    "C5": "BLOCKED"
+  },
+  "key_evidence": {
+    "C1": {
+      "exact_ranks_by_width": [2, 4, 6, 8, 10, 12, 14, 16],
+      "negative_control_rank": 4,
+      "negative_control_unknowns": 6,
+      "all_ten_jacobians_full_rank": true,
+      "minimum_singular_ratio": 0.00010728791021724164
+    },
+    "C2": {
+      "configuration": "d=256, hidden=1024, layers=12, seeds=10, float64",
+      "max_invariant_rate_abs": 6.661338147750939e-16,
+      "max_rate_relative_to_term_scale": 3.9075619819679394e-16,
+      "min_seed_nonconserved_control_rate_abs": 0.001807331989681632
+    },
+    "C3": {
+      "configuration": "layers=12, d=192, heads=3, head_dimension=64, sequence_length=32, seeds=10",
+      "max_relative_rate_residual": 2.2073201955743162e-16,
+      "max_rope_block_qk_rate_abs": 6.661338147750939e-16,
+      "max_vo_matrix_rate_fro": 1.051088885904111e-14,
+      "min_nonconserved_control_rate_abs": 0.3806736206839703
+    },
+    "C4": {
+      "d": 3,
+      "n_experts": 2,
+      "d_dt_sum_gate_rows_coordinate_1": "9/250",
+      "softmax_control_dL_d_common_shift": "0/1",
+      "exact_arithmetic_passed": true,
+      "independent_checker_passed": true
+    },
+    "C5": {
+      "routes_completed": 4,
+      "training_code_present": false,
+      "raw_logs_present": false,
+      "projected_lower_seconds": 731962.1554110199,
+      "final_verdict": "BLOCKED"
+    }
+  },
+  "historical_external_result": {
+    "live_judge_score": "5/10",
+    "candidate_space": "DineshAI/ay4Q69fAJL",
+    "judged_revision": "47668d9139058ae1e50a39d5bfcb7280fdd74c34",
+    "published_revision": "6219f9cc8d0132ab7407b2d31712ec4180c13c67",
+    "current_score_claim": false
+  },
+  "publication": {
+    "publication_allowed": false,
+    "author_endorsement_claimed": false
+  },
+  "boundary": "Claims 1-3 pass their explicit structural or finite scopes. Claim 4 is contradicted by an exact normalized-sigmoid counterexample. Claim 5 remains blocked because the exact named-dataset campaign is unavailable. No new score is claimed."
+}

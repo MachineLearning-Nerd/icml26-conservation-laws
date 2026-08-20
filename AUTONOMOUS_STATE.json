@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "paper": "Conservation Laws for Modern Neural Architectures",
+  "arxiv": "2606.17816",
+  "phase": "standardized_claim_audit_publication",
+  "overall_status": "PARTIAL_C1_C2_C3_VERIFIED_C4_FALSIFIED_C5_BLOCKED_HISTORICAL_SCORE_5_OF_10_NO_CURRENT_SCORE",
+  "next_action": "Retain the mixed claim evidence package; do not claim a new score until an external evaluation is available and keep C5 blocked until exact campaign assets or authorized compute exist.",
+  "current_score_claim": false,
+  "publication_allowed": false,
+  "author_endorsement_claimed": false,
+  "claim_statuses": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "VERIFIED_SCOPED",
+    "C3": "VERIFIED_SCOPED",
+    "C4": "FALSIFIED_SCOPED",
+    "C5": "BLOCKED"
+  },
+  "source": {
+    "version": "arXiv:2606.17816v1",
+    "retrieved_utc": "2026-07-28T12:12:40Z",
+    "html_sha256": "31078a87b1a9b38b5d13b0bafe40512ac6cccb04bd6f35b8de05ed2b8b804557"
+  },
+  "repository": {
+    "owner": "MachineLearning-Nerd",
+    "canonical_email": "MachineLearning-Nerd@users.noreply.github.com",
+    "github": "https://github.com/MachineLearning-Nerd/icml26-conservation-laws",
+    "old_slug": "icml26-repro-ay4Q69fAJL-conservation-laws-for-modern-neural-architectures",
+    "branches": 9,
+    "expected_reachable_commits": 31,
+    "pre_normalization_head": "4e8105a29bf68be62f3b89aee7a5211698692457",
+    "recovery_bundle_sha256": "0dcbc293f9a1d6e956b699db3025b36c16e91c09561cf8300ac354b26de23fd0"
+  },
+  "historical_external_result": {
+    "live_judge_score": "5/10",
+    "candidate_space": "DineshAI/ay4Q69fAJL",
+    "judged_revision": "47668d9139058ae1e50a39d5bfcb7280fdd74c34",
+    "published_revision": "6219f9cc8d0132ab7407b2d31712ec4180c13c67"
+  }
+}

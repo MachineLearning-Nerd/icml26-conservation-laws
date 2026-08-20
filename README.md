@@ -4,13 +4,20 @@
 
 Independent claim-by-claim reproduction audit for [*Conservation Laws for Modern Neural Architectures*](https://arxiv.org/abs/2606.17816), by Viet-Hoang Tran, Vinh Khanh Bui, Tan Lai Ngoc, Nam Nguyen, Tuan Dam, and Tan M. Nguyen. This repository is an independent reproduction and evidence audit, not the authors' official implementation.
 
+The standardized dossier is available in [STATUS.md](STATUS.md),
+[CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md), [SOURCE_AUDIT.md](SOURCE_AUDIT.md),
+[ENVIRONMENT.md](ENVIRONMENT.md), [REPORT.md](REPORT.md),
+[CITATION.cff](CITATION.cff), [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md),
+[claims.json](claims.json), [reproduction_verdicts.json](reproduction_verdicts.json),
+and [verify_final.py](verify_final.py).
+
 ## Paper in one paragraph
 
 The paper develops a unified framework for conservation laws under gradient flow in modern neural architectures. It studies feedforward networks with GELU, SiLU, and SwiGLU activations, multi-head attention with sinusoidal and rotary positional encodings, and mixture-of-experts models with different gating designs. The paper derives structural invariants and supports them with numerical experiments, while this repository separates theorem-level certificates, finite audits, exact counterexamples, and unavailable paper-scale experiments.
 
 ## Audit headline
 
-The previous live judged score is **5/10**. The current audit records Claims 1, 2, and 3 as **VERIFIED**, Claim 4 as **FALSIFIED**, and Claim 5 as **BLOCKED**. The conservative forecast is 7–9/10, with 9/10 the best-supported possible score; that forecast is not a judge result.
+The previous live judged score is **5/10**. The current audit records Claims 1, 2, and 3 as **VERIFIED within the stated audit scopes**, Claim 4 as **FALSIFIED within the exact counterexample scope**, and Claim 5 as **BLOCKED**. The conservative forecast is 7–9/10, with 9/10 the best-supported possible score; that forecast is not a judge result and no current score is claimed.
 
 ## Claim and evidence ledger
 

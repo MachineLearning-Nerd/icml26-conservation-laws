@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If this audit or its evidence package is useful, please cite the paper and this repository."
+title: "Independent claim audit of Conservation Laws for Modern Neural Architectures"
+version: "0.1.0"
+date-released: 2026-08-20
+authors:
+  - family-names: Tran
+    given-names: Viet-Hoang
+  - family-names: Bui
+    given-names: Vinh Khanh
+  - family-names: Ngoc
+    given-names: Tan Lai
+  - family-names: Nguyen
+    given-names: Nam
+  - family-names: Dam
+    given-names: Tuan
+  - family-names: Nguyen
+    given-names: Tan M.
+repository-code: https://github.com/MachineLearning-Nerd/icml26-conservation-laws
+url: https://arxiv.org/abs/2606.17816
+doi: 10.48550/arXiv.2606.17816
+keywords:
+  - conservation laws
+  - gradient flow
+  - neural network symmetries
+  - reproduction audit
